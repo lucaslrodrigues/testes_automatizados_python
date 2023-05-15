@@ -1,4 +1,4 @@
-#Pytest
+# Pytest
 
 Pytest é uma biblioteca em python utilizada para realizar testes automatizados em python. Uma de suas funçẽoes é debugar codigos a procura de erro.<br>
 Para que seja executado, é necessário criar arquivos de teste com funções de teste que lançam exeções para cada erro.<br>
@@ -113,8 +113,8 @@ print("Nome existe?: " + str(hasattr(pessoa, 'CPF')))
 ```
 **Resultado**
 ```
-Nome existe?: True
-CPF existe?: False
+> Nome existe?: True
+> CPF existe?: False
 ```
 ## try except
 > Pesquisar futuramente...

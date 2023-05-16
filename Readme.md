@@ -27,6 +27,7 @@ def test_hello_world():
 
 Para executar é necessário abrir o propt de comandos no diretorio raiz e digitar **pytest**,<br>
 que ele automaticamente ira procurar por arquivos **_test.py**.<br>
+> Mais em https://docs.pytest.org/en/7.3.x/how-to/usage.html#usage
 
 **Resultado**
 ```
@@ -47,6 +48,8 @@ FAILED test_helloWorld.py::test_hello_world - AssertionError: 'Hello' não é ig
 Para executar um arquivo de testes em expecifico, é necessário passar seu caminho.<br>
 ```
 pytest ./test_raise.py
+ou
+pytest test_raise
 ```
 No exemplo o prompt está aberto no diretorio raiz, então simplifiquei o path.
 
@@ -114,11 +117,15 @@ print("Nome existe?: " + str(hasattr(pessoa, 'CPF')))
 **Resultado**
 ```
 > Nome existe?: True
-> CPF existe?: False
+> CPF existe?: FalseV
 ```
-## try except
+## try excepts
 > Pesquisar futuramente...
 
 ## Docs
-Doc oficial python https://docs.pytest.org/en/7.3.x/getting-started.html#getstarted<br>
+Doc oficial pytest https://docs.pytest.org/en/7.3.x/getting-started.html#getstarted<br>
 Diferença entre raise e assert: https://pt.stackoverflow.com/questions/127118/python-diferen%C3%A7a-entre-assert-e-raise<br>
+
+Boas praticas de empacotamento https://packaging.python.org/en/latest/tutorials/packaging-projects/
+Boas praticas de integração https://docs.pytest.org/en/7.3.x/explanation/goodpractices.html#test-discovery
+Diretorios temporarios https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#tmp-path-handling

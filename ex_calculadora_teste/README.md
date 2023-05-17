@@ -1,0 +1,3 @@
+## Nota de aprendizado
++   Classes de teste podem concentrar varias funções de teste. Em sua assinatura deve conter o padrão **"class Testclass:"**
++   Arquivos **"\_\_init\_\_"** devem estar em pastas que precisam reconhecidas como um pacote com modulos a serem importados. Como no caso da pasta operations que contém todos os arquivos de classe com as funções que são importadas no arquivo de testes. Para que o importe fosse possivel, o arquivo vazio __teste__ precisava estar presente.

@@ -8,6 +8,8 @@ packages = [{include = "ex_calculadora_teste"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pytest = "^7.3.1"
+faker = "^18.9.0"
 
 
 [build-system]

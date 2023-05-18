@@ -2,6 +2,7 @@
 +   Classes de teste podem concentrar varias funções de teste. Em sua assinatura deve conter o padrão **"class Testclass:"**
 +   Arquivos **"\_\_init\_\_"** devem estar em pastas que precisam reconhecidas como um pacote com modulos a serem importados. Como no caso da pasta operations que contém todos os arquivos de classe com as funções que são importadas no arquivo de testes. Para que o importe fosse possivel, o arquivo vazio __teste__ precisava estar presente.
 
+> O arquivo **calculadora.py** (que utilizaria os metodos) não foi terminado pois não tinha necessidade para o teste em si.
 # Fixtures
 
 as fixtures são basicamente recursos utilizados em um arquivo de testes. Elas utilizadas para suprir a necessidade de parametros em uma função de testes e reduzir a redundancia ao longo do arquivo.<br>
@@ -174,3 +175,7 @@ class Testclass():
 
 Como o arquivo de recursos é reconhecido automaticamente pelo **pytest**, não é necessario importar nada para poder utilizar os recursos, apenas é necessario utiliza-los como parametros da função.<br>
 Com isso, retiramos a necessidade de repetição de código e conseguimos concentrar o arquivo de testes apenas para realizar os testes, simplificando e facilitando ainda mais o desenvolvimento de testes unitarios.
+
+# docs
+Fixtures oficial doc: https://docs.pytest.org/en/7.3.x/reference/fixtures.html#fixtures<br>
+Aula de fixtures: https://www.youtube.com/watch?v=sidi9Z_IkLU

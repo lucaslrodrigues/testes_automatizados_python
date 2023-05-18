@@ -1,4 +1,4 @@
-from ex_calculadora_teste.app.operations.test_operacoes import Operacoes
+from ex_calculadora_teste.app.testes.test_operacoes import Operacoes
 
 operacoes = Operacoes()
 

@@ -1,4 +1,11 @@
 # coding=utf-8
+
+import sys
+import os
+
+dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # retorna dois diretorios para conseguir o path do diretorio app
+sys.path.append(dir) # adicionando o caminho do diretorio app ao sys.path
+
 from operations.adicao import adicaoOperation
 from operations.subtracao import subtracaoOperation
 from operations.multiplicacao import multiplicacaoOperation

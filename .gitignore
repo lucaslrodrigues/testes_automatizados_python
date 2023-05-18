@@ -2,3 +2,10 @@
 /primeiros_testes/.venv
 /primeiros_testes/.pytest_cache
 /primeiros_testes/poetry.lock
+/ex_calculadora_teste/.pytest_cache
+/ex_calculadora_teste/.poetry.lock
+/ex_calculadora_teste/.venv
+/ex_calculadora_teste/app/.pytest_cache
+/ex_calculadora_teste/app/__pycache__
+/ex_calculadora_teste/app/operations/__pycache__
+/ex_calculadora_teste/app/tests/__pycache__

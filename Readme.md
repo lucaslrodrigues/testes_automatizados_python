@@ -113,7 +113,7 @@ pessoa = Pessoa()
 #          Dentro da classe pessoa tem nome?
 #                              V        V
 print("Nome existe?: " + str(hasattr(pessoa, 'nome')))
-print("Nome existe?: " + str(hasattr(pessoa, 'CPF')))
+print("CPF existe?: " + str(hasattr(pessoa, 'CPF')))
 ```
 **Resultado**
 ```

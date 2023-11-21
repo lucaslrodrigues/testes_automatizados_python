@@ -100,6 +100,7 @@ class concreta(abstrata):
         return "implementei com sucesso"
 ```
 raise é muito bom para retornar exeptions em APIs, informando uma descrição do erro.
+> É semelhante ao throw do Java, podendo ser passada uma exception como argumento.
 
 ## hasttr
 hasttr é um metodo de validação sem condicionais. Serve para veridicar se em uma classe existe determinada atributo. Ela cria uma afirmação da existencia de determinado atributo, que como resultado, retorna um boolean.

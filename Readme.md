@@ -112,8 +112,8 @@ class pessoa():
 pessoa = Pessoa()
  
 # hasattr checando a existencia de um atributo existente
-#          Dentro da classe pessoa tem nome?
-#                              V        V
+#                  Dentro da classe pessoa tem nome?
+#                                      V        V
 print("Nome existe?: " + str(hasattr(pessoa, 'nome')))
 print("CPF existe?: " + str(hasattr(pessoa, 'CPF')))
 ```

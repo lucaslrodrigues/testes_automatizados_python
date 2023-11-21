@@ -55,7 +55,7 @@ pytest test_raise
 ```
 No exemplo o prompt está aberto no diretorio raiz, então simplifiquei o path.
 <br>
-> classes de teste devem ter na sua assinatura "**class Testclass:**",<br> que sem esse padrão de nomeclatura não será executada. Está classe será instanciada para cada classe de teste contida na mesma.
+> classes de teste devem ter na sua assinatura "**class Testclass:**",<br> que sem esse padrão de nomeclatura não será executada. <br>Está classe será instanciada para cada classe de teste contida na mesma.
 # Exeções
 Com o pytest executando as funções para teste, é necessário ter alguma forma de mensageria dos erros, para isso são utilizados os metodos que retornam **Exeptions**.<br>
 

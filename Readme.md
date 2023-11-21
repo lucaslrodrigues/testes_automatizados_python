@@ -130,6 +130,6 @@ print("CPF existe?: " + str(hasattr(pessoa, 'CPF')))
 Doc oficial pytest https://docs.pytest.org/en/7.3.x/getting-started.html#getstarted<br>
 Diferença entre raise e assert: https://pt.stackoverflow.com/questions/127118/python-diferen%C3%A7a-entre-assert-e-raise<br>
 
-Boas praticas de empacotamento https://packaging.python.org/en/latest/tutorials/packaging-projects/
-Boas praticas de integração https://docs.pytest.org/en/7.3.x/explanation/goodpractices.html#test-discovery
+Boas praticas de empacotamento https://packaging.python.org/en/latest/tutorials/packaging-projects/<br>
+Boas praticas de integração https://docs.pytest.org/en/7.3.x/explanation/goodpractices.html#test-discovery<br>
 Diretorios temporarios https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#tmp-path-handling

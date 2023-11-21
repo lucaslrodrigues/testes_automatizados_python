@@ -1,7 +1,9 @@
 # Pytest
 
-Pytest é uma biblioteca em python utilizada para realizar testes automatizados em python. Uma de suas funçẽoes é debugar codigos a procura de erro.<br>
-Para que seja executado, é necessário criar arquivos de teste com funções de teste que lançam exeções para cada erro.<br>
+Durante o desenvolvimento é de pratica do dev realizar pequenos testes do que está sendo desenvolvido, assim como é de responsabilidade do QA encontrar erros de requisitos.<br>
+Esses testes visam encontrar erros sintáticos e de regra de negócios, mas não encontram erros de lógica e de falta de validações que podem ocorrem durante o uso final do software.
+Pytest é uma biblioteca em python utilizada para realizar testes unitários em python. Uma de suas funções é debugar o código a procura de erros.<br>
+Para que seja executado, é necessário criar arquivos de teste, que contam com funções de teste que lançam exeções caso não seja atendido o resultado pré definido.<br>
 
 Comando de instalação
 ```

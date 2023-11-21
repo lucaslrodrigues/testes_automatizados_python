@@ -121,7 +121,7 @@ print("CPF existe?: " + str(hasattr(pessoa, 'CPF')))
 **Resultado**
 ```
 > Nome existe?: True
-> CPF existe?: FalseV
+> CPF existe?: False
 ```
 ## try excepts
 > Pesquisar futuramente...

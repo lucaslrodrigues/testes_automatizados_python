@@ -1,0 +1,621 @@
+1 - plat-int-bariloche-order-tracking
+
+1                   2023-12-13T15:06:21.475-03:00
+[ERROR] AttributeError: 'NoneType' object has no attribute 'get' Traceback (most recent call last):   File "/var/task/utils/decorators.py", line 33, in wrapper     return f(*args, **kwargs)   File "/var/task/bariloche/order_tracking/run_lambda.py", line 14, in lambda_handler     response = OrdersTrackingService(authorization=token).process()   File "/var/task/bariloche/services/orders_tracking_service.py", line 30, in process     pedidos_ok = res.get("pedidos_ok", [])
+Campo               Valor
+@ingestionTime      1702490784324
+@log                288061038735:/aws/lambda/plat-int-bariloche-order-tracking-prd
+@logStream          2023/12/13/[$LATEST]6aae616d5dc841ac8ee9c0d588efc8f3
+@message            [ERROR] AttributeError: 'NoneType' object has no attribute 'get'
+                    Traceback (most recent call last):
+                      File "/var/task/utils/decorators.py", line 33, in wrapper
+                        return f(*args, **kwargs)
+                      File "/var/task/bariloche/order_tracking/run_lambda.py", line 14, in lambda_handler
+                        response = OrdersTrackingService(authorization=token).process()
+                      File "/var/task/bariloche/services/orders_tracking_service.py", line 30, in process
+                        pedidos_ok = res.get("pedidos_ok", [])
+@timestamp          1702490781475
+
+---------------------------------------------------------------------------------------------------------
+
+2 - plat-int-bariloche-defaulting-customer
+1                   2023-12-12T03:02:09.087-03:00
+[ERROR] 2023-12-12T06:02:09.087Z d37b6b3d-6fbe-4a9b-a05e-da62429e1985 Erro ao buscar clientes inadimplestes na ALPE 'data'
+Campo               Valor
+@ingestionTime      1702360938113
+@log                288061038735:/aws/lambda/plat-int-bariloche-defaulting-customer-prd
+@logStream          2023/12/12/[$LATEST]61f8bae84c0e459784a685c699dcf049
+@message            [ERROR]	2023-12-12T06:02:09.087Z	d37b6b3d-6fbe-4a9b-a05e-da62429e1985	Erro ao buscar clientes inadimplestes na ALPE 'data'
+@requestId          d37b6b3d-6fbe-4a9b-a05e-da62429e1985
+@timestamp          1702360929087
+
+---------------------------------------------------------------------------------------------------------
+
+3 - plat-int-bariloche-credit-limit
+
+1                   2023-12-13T14:57:06.924-03:00
+[ERROR] TypeError: 'NoneType' object is not subscriptable Traceback (most recent call last):   File "/var/task/bariloche/credit_limit/run_lambda.py", line 12, in lambda_handler     response = CreditLimitService(authorization=token).process()   File "/var/task/bariloche/services/credit_limit_service.py", line 132, in process     if not 200 <= ret_send["data"]["code"] <= 299:
+Campo               Valor
+@ingestionTime      1702490235944
+@log                288061038735:/aws/lambda/plat-int-bariloche-credit-limit-prd
+@logStream          2023/12/13/[$LATEST]21201852910740a598f7bab997df6923
+@message            [ERROR] TypeError: 'NoneType' object is not subscriptable
+                    Traceback (most recent call last):
+                      File "/var/task/bariloche/credit_limit/run_lambda.py", line 12, in lambda_handler
+                        response = CreditLimitService(authorization=token).process()
+                      File "/var/task/bariloche/services/credit_limit_service.py", line 132, in process
+                        if not 200 <= ret_send["data"]["code"] <= 299:
+@timestamp          1702490226924
+
+---------------------------------------------------------------------------------------------------------
+
+4 - plat-int-bariloche-orders
+
+1                   2023-12-13T04:00:46.464-03:00
+[ERROR] 2023-12-13T07:00:46.464Z 4a196e20-cbf0-4813-b586-16e824905683 Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;20ddda17&#46;1702450846&#46;1b519a68 </BODY></HTML> Dormindo 28 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702450855391
+@log                288061038735:/aws/lambda/plat-int-bariloche-orders-prd
+@logStream          2023/12/13/[$LATEST]dcdef723dac84767947a2d688706eb5c
+@message            [ERROR]	2023-12-13T07:00:46.464Z	4a196e20-cbf0-4813-b586-16e824905683	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;20ddda17&#46;1702450846&#46;1b519a68
+                    </BODY></HTML>
+                    Dormindo 28 segundos antes de tentar novamente.
+@requestId          4a196e20-cbf0-4813-b586-16e824905683
+@timestamp          1702450846464
+
+---------------------------------------------------------------------------------------------------------
+
+5 - plat-int-bariloche-invoicing
+
+1                   2023-12-13T15:49:22.344-03:00
+[ERROR] 2023-12-13T18:49:22.344Z a622f7ed-8b3d-44e7-9e9f-032626e2a9eb status code -> 500, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/suppliers/67313130000155/cancel-bank-slip -> error: b'{"data":{"errors":[{"message":"Wasn\'t able to find Boleto whose document reference is 00000117"}]},"status_code":500}'
+Campo               Valor
+@ingestionTime      1702493368292
+@log                288061038735:/aws/lambda/plat-int-bariloche-invoicing-prd
+@logStream          2023/12/13/[$LATEST]6ba49e5f80b54878a5279c38a57643d9
+@message            [ERROR]	2023-12-13T18:49:22.344Z	a622f7ed-8b3d-44e7-9e9f-032626e2a9eb	status code -> 500, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/suppliers/67313130000155/cancel-bank-slip -> error: b'{"data":{"errors":[{"message":"Wasn\'t able to find Boleto whose document reference is 00000117"}]},"status_code":500}'
+@requestId          a622f7ed-8b3d-44e7-9e9f-032626e2a9eb
+@timestamp          1702493362344
+data.errors.0.message	
+Wasn't able to find Boleto whose document reference is 00000117
+status_code	
+500
+
+---------------------------------------------------------------------------------------------------------
+
+6 - plat-int-bariloche-orders-status
+
+1                   2023-12-12T19:33:36.019-03:00
+[ERROR] 2023-12-12T22:33:36.019Z d1a6ad6e-8900-4a0f-aba4-4f45b4960f28 Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;20ddda17&#46;1702420416&#46;1a0ed1b6 </BODY></HTML> Dormindo 30 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702420417562
+@log                288061038735:/aws/lambda/plat-int-bariloche-orders-status-prd
+@logStream          2023/12/12/[$LATEST]fb0a6bd4b412412696cbe922156cd560
+@message            [ERROR]	2023-12-12T22:33:36.019Z	d1a6ad6e-8900-4a0f-aba4-4f45b4960f28	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;20ddda17&#46;1702420416&#46;1a0ed1b6
+                    </BODY></HTML>
+                    Dormindo 30 segundos antes de tentar novamente.
+@requestId          d1a6ad6e-8900-4a0f-aba4-4f45b4960f28
+@timestamp          1702420416019
+
+---------------------------------------------------------------------------------------------------------
+
+7 - plat-int-bariloche-products
+
+1                   2023-12-13T10:31:54.102-03:00
+[ERROR] 2023-12-13T13:31:54.102Z 653dd9be-7e83-4017-ac2b-0a2f0fbae0b2 ERRO: status code -> 504, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/suppliers/67313130000155/products
+Campo               Valor
+@ingestionTime      1702474323116
+@log                288061038735:/aws/lambda/plat-int-bariloche-products-prd
+@logStream          2023/12/13/[$LATEST]ba2af9a97ad548f7a3fdeefc8a3c8dc7
+@message            [ERROR]	2023-12-13T13:31:54.102Z	653dd9be-7e83-4017-ac2b-0a2f0fbae0b2	ERRO: status code -> 504, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/suppliers/67313130000155/products
+@requestId          653dd9be-7e83-4017-ac2b-0a2f0fbae0b2
+@timestamp          1702474314102
+
+---------------------------------------------------------------------------------------------------------
+
+8 - plat-int-bariloche-send-pdfxml
+
+1                   2023-12-13T15:25:20.262-03:00
+[ERROR] AttributeError: 'NoneType' object has no attribute 'get' Traceback (most recent call last):   File "/var/task/bariloche/send_pdfxml/run_lambda.py", line 12, in lambda_handler     response = SendPdfXml(authorization=token).process()   File "/var/task/bariloche/services/send_pdfxml_service.py", line 36, in process     if not res.get("pedidos_ok"):
+Campo               Valor
+@ingestionTime      1702491928881
+@log                288061038735:/aws/lambda/plat-int-bariloche-send-pdfxml-prd
+@logStream          2023/12/13/[$LATEST]f17ef29eac7c45c9b67130b7fb7d3f2a
+@message            [ERROR] AttributeError: 'NoneType' object has no attribute 'get'
+                    Traceback (most recent call last):
+                      File "/var/task/bariloche/send_pdfxml/run_lambda.py", line 12, in lambda_handler
+                        response = SendPdfXml(authorization=token).process()
+                      File "/var/task/bariloche/services/send_pdfxml_service.py", line 36, in process
+                        if not res.get("pedidos_ok"):
+@timestamp          1702491920262
+
+---------------------------------------------------------------------------------------------------------
+
+9 - plat-int-benassi-credit-limit
+
+1                   2023-12-13T04:00:40.089-03:00
+[ERROR] 2023-12-13T07:00:40.089Z 1ce1debe-d490-4806-a9de-02968ec2eb05 Erro ao executar função process de Limite de crédito Benassi. MSG:{str(error)}
+Campo               Valor
+@ingestionTime      1702450848368
+@log                288061038735:/aws/lambda/plat-int-benassi-credit-limit-prd
+@logStream          2023/12/13/[$LATEST]edefce6be84a4e12be81b29b43e2d103
+@message            [ERROR]	2023-12-13T07:00:40.089Z	1ce1debe-d490-4806-a9de-02968ec2eb05	Erro ao executar função process de Limite de crédito Benassi. MSG:{str(error)}
+@requestId          1ce1debe-d490-4806-a9de-02968ec2eb05
+@timestamp          1702450840089
+
+---------------------------------------------------------------------------------------------------------
+
+10 - plat-int-benassi-orders
+
+1                   2023-12-13T04:00:49.485-03:00
+[ERROR] 2023-12-13T07:00:49.485Z 9ad8759a-6e4a-4bb0-80f2-06e04d04f6df Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;20ddda17&#46;1702450849&#46;1b5182df </BODY></HTML> Dormindo 12 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702450858369
+@log                288061038735:/aws/lambda/plat-int-benassi-orders-prd
+@logStream          2023/12/13/[$LATEST]0768eadffdc8431f8a7226d55b4e1278
+@message            [ERROR]	2023-12-13T07:00:49.485Z	9ad8759a-6e4a-4bb0-80f2-06e04d04f6df	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;20ddda17&#46;1702450849&#46;1b5182df
+                    </BODY></HTML>
+                    Dormindo 12 segundos antes de tentar novamente.
+@requestId          9ad8759a-6e4a-4bb0-80f2-06e04d04f6df
+@timestamp          1702450849485
+
+---------------------------------------------------------------------------------------------------------
+
+11 - plat-int-benassi-defaulting-customer
+
+1                   2023-12-12T19:31:38.511-03:00
+[ERROR] 2023-12-12T22:31:38.511Z dd1d236f-fb00-4bb0-883e-38b0d9ce013f Erro ao executar função process de clientes inadimplentes Benassi. MSG: 'data'
+Campo               Valor
+@ingestionTime      1702420307093
+@log                288061038735:/aws/lambda/plat-int-benassi-defaulting-customer-prd
+@logStream          2023/12/12/[$LATEST]bc97251ec5434b9182a6f9526126c1f3
+@message            [ERROR]	2023-12-12T22:31:38.511Z	dd1d236f-fb00-4bb0-883e-38b0d9ce013f	Erro ao executar função process de clientes inadimplentes Benassi. MSG: 'data'
+@requestId          dd1d236f-fb00-4bb0-883e-38b0d9ce013f
+@timestamp          1702420298511
+
+---------------------------------------------------------------------------------------------------------
+
+12 - plat-int-benassi-products
+
+1                   2023-12-13T16:31:51.353-03:00
+[ERROR] 2023-12-13T19:31:51.352Z be87350a-fd28-4204-b538-2d7197295750 ERRO: status code -> 504, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/suppliers/04052176000490/products
+Campo               Valor
+@ingestionTime      1702495920376
+@log                288061038735:/aws/lambda/plat-int-benassi-products-prd
+@logStream          2023/12/13/[$LATEST]bdafec27d2ad45b98388b05dcb65e470
+@message            [ERROR]	2023-12-13T19:31:51.352Z	be87350a-fd28-4204-b538-2d7197295750	ERRO: status code -> 504, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/suppliers/04052176000490/products
+@requestId          be87350a-fd28-4204-b538-2d7197295750
+@timestamp          1702495911353
+
+---------------------------------------------------------------------------------------------------------
+
+13 - plat-int-benassi-send-pdfxml
+
+1                   2023-12-13T04:41:23.245-03:00
+[ERROR] 2023-12-13T07:41:23.245Z 0d2988d4-5410-4b3e-9b13-dccd74bc2e99 Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;11ddda17&#46;1702453283&#46;3294c4ba </BODY></HTML> Dormindo 33 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702453292137
+@log                288061038735:/aws/lambda/plat-int-benassi-send-pdfxml-prd
+@logStream          2023/12/13/[$LATEST]1901a47a114e42b5bb594203cf933182
+@message            [ERROR]	2023-12-13T07:41:23.245Z	0d2988d4-5410-4b3e-9b13-dccd74bc2e99	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;11ddda17&#46;1702453283&#46;3294c4ba
+                    </BODY></HTML>
+                    Dormindo 33 segundos antes de tentar novamente.
+@requestId          0d2988d4-5410-4b3e-9b13-dccd74bc2e99
+@timestamp          1702453283245
+
+---------------------------------------------------------------------------------------------------------
+
+14 - plat-int-benassi-completed-partial-return
+
+1                   2023-12-12T14:02:11.106-03:00
+[ERROR] 2023-12-12T17:02:11.106Z e65d5594-547e-4af6-8b8d-5e0b09e5dfd3 Erro ao executar coleta de segunda via de boleto. MSG:list indices must be integers or slices, not str
+Campo               Valor
+@ingestionTime      1702400539815
+@log                288061038735:/aws/lambda/plat-int-benassi-completed-partial-return-prd
+@logStream          2023/12/12/[$LATEST]7110e3155cab4920804985db9266c19d
+@message            [ERROR]	2023-12-12T17:02:11.106Z	e65d5594-547e-4af6-8b8d-5e0b09e5dfd3	Erro ao executar  coleta de segunda via de boleto. MSG:list indices must be integers or slices, not str
+@requestId          e65d5594-547e-4af6-8b8d-5e0b09e5dfd3
+@timestamp          1702400531106
+
+---------------------------------------------------------------------------------------------------------
+
+15 - plat-int-girotrade-visit-calendar
+
+1                   2023-12-13T16:34:48.953-03:00
+[ERROR] 2023-12-13T19:34:48.953Z f94551ec-2774-49af-a881-f4789b52e228 status code -> 504, url -> http://internal-app-fv-api-prd-ecs-79594765.us-east-1.elb.amazonaws.com/calendario_visita/registro-visita -> error: b'<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n</body>\r\n</html>\r\n'
+Campo               Valor
+@ingestionTime      1702496097977
+@log                288061038735:/aws/lambda/plat-int-girotrade-visit-calendar-prd
+@logStream          2023/12/13/[$LATEST]f66a040c1635465da9329b5ede824143
+@message            [ERROR]	2023-12-13T19:34:48.953Z	f94551ec-2774-49af-a881-f4789b52e228	status code -> 504, url -> http://internal-app-fv-api-prd-ecs-79594765.us-east-1.elb.amazonaws.com/calendario_visita/registro-visita -> error: b'<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n</body>\r\n</html>\r\n'
+@requestId          f94551ec-2774-49af-a881-f4789b52e228
+@timestamp          1702496088953
+
+---------------------------------------------------------------------------------------------------------
+
+16 - plat-int-girotrade-customer-kinesis-send
+
+Sem registros de erro
+
+---------------------------------------------------------------------------------------------------------
+
+17 - plat-int-girotrade-historico-de-titulos
+
+1                   2023-12-13T16:33:00.194-03:00
+[ERROR] 2023-12-13T19:33:00.194Z 44fb7095-93b6-4f02-90ee-3ab3dc8a1b11 status code -> 422, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v2/historico_titulo -> error: b'[TypeError("\'ErrorWrapper\' object is not iterable"), TypeError(\'vars() argument must have __dict__ attribute\')]'
+Campo               Valor
+@ingestionTime      1702495988091
+@log                288061038735:/aws/lambda/plat-int-girotrade-historico-de-titulos-prd
+@logStream          2023/12/13/[$LATEST]ca1a072f3bf14bc9999c80d173bf963f
+@message            [ERROR]	2023-12-13T19:33:00.194Z	44fb7095-93b6-4f02-90ee-3ab3dc8a1b11	status code -> 422, url -> https://yandeh-seller-integration.yandeh.com.br/fastapi/v2/historico_titulo -> error: b'[TypeError("\'ErrorWrapper\' object is not iterable"), TypeError(\'vars() argument must have __dict__ attribute\')]'
+@requestId          44fb7095-93b6-4f02-90ee-3ab3dc8a1b11
+@timestamp          1702495980194
+
+---------------------------------------------------------------------------------------------------------
+
+18 - plat-int-girotrade-limite-de-credito
+
+1                   2023-12-12T19:04:48.597-03:00
+[ERROR] 2023-12-12T22:04:48.597Z 650fe9b2-2a23-401b-838c-05da90b1b2aa Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. {"message": "Endpoint request timed out"} Dormindo 15 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702418697622
+@log                288061038735:/aws/lambda/plat-int-girotrade-limite-de-credito-prd
+@logStream          2023/12/12/[$LATEST]7bb53562fc9a47569085dfdae9f696f2
+@message            [ERROR]	2023-12-12T22:04:48.597Z	650fe9b2-2a23-401b-838c-05da90b1b2aa	Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    {"message": "Endpoint request timed out"}
+                    Dormindo 15 segundos antes de tentar novamente.
+@requestId          650fe9b2-2a23-401b-838c-05da90b1b2aa
+@timestamp          1702418688597
+message	
+Endpoint request timed out
+
+---------------------------------------------------------------------------------------------------------
+
+19 - plat-int-girotrade-cliente-inadimplente
+
+1                   2023-12-12T06:53:32.372-03:00
+[ERROR] 2023-12-12T09:53:32.372Z 02ddff53-3bc5-4b98-b085-09a50612e949 Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;11ddda17&#46;1702374812&#46;2d80e8b3 </BODY></HTML> Dormindo 16 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702374816944
+@log                288061038735:/aws/lambda/plat-int-girotrade-cliente-inadimplente-prd
+@logStream          2023/12/12/[$LATEST]65136ffbd966442691249e2de91e81f7
+@message            [ERROR]	2023-12-12T09:53:32.372Z	02ddff53-3bc5-4b98-b085-09a50612e949	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;11ddda17&#46;1702374812&#46;2d80e8b3
+                    </BODY></HTML>
+                    Dormindo 16 segundos antes de tentar novamente.
+@requestId          02ddff53-3bc5-4b98-b085-09a50612e949
+@timestamp          1702374812372
+
+---------------------------------------------------------------------------------------------------------
+
+20 - plat-int-girotrade-orders
+
+1                   2023-12-13T11:03:59.613-03:00
+[ERROR] 2023-12-13T14:03:59.613Z 94b15e6d-70e8-4369-9896-e31b0fecdf22 Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;20ddda17&#46;1702476239&#46;1c7d1f79 </BODY></HTML> Dormindo 60 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702476248541
+@log                288061038735:/aws/lambda/plat-int-girotrade-orders-prd
+@logStream          2023/12/13/[$LATEST]937b4d08fbb04fb39fe37b15b0653e68
+@message            [ERROR]	2023-12-13T14:03:59.613Z	94b15e6d-70e8-4369-9896-e31b0fecdf22	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;20ddda17&#46;1702476239&#46;1c7d1f79
+                    </BODY></HTML>
+                    Dormindo 60 segundos antes de tentar novamente.
+@requestId          94b15e6d-70e8-4369-9896-e31b0fecdf22
+@timestamp          1702476239613
+
+---------------------------------------------------------------------------------------------------------
+
+21 - plat-int-girotrade-order-status
+
+1                   2023-12-13T16:54:38.815-03:00
+[ERROR] 2023-12-13T19:54:38.815Z cf7f64e2-bc6d-4113-a31e-3eeec77b9ac1 Falha ao processar pedido 94070: KeyError: '27896098909755'
+Campo               Valor
+@ingestionTime      1702497287478
+@log                288061038735:/aws/lambda/plat-int-girotrade-order-status-prd
+@logStream          2023/12/13/[$LATEST]3f5c16ca02dd4a22b4b27bd586a76a36
+@message            [ERROR]	2023-12-13T19:54:38.815Z	cf7f64e2-bc6d-4113-a31e-3eeec77b9ac1	Falha ao processar pedido 94070: KeyError: '27896098909755'
+@requestId          cf7f64e2-bc6d-4113-a31e-3eeec77b9ac1
+@timestamp          1702497278815
+
+---------------------------------------------------------------------------------------------------------
+
+22 - plat-int-girotrade-sftp
+
+1                   2023-12-13T10:00:29.064-03:00
+[ERROR] 2023-12-13T13:00:29.064Z 30ab04f5-998f-4553-9fc4-af0582f3f1de Erro 502 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <html> <head><title>502 Bad Gateway</title></head> <body> <center><h1>502 Bad Gateway</h1></center> </body> </html> Dormindo 57 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702472432567
+@log                288061038735:/aws/lambda/plat-int-girotrade-sftp-prd
+@logStream          2023/12/13/[$LATEST]ec467596bb1a4cef9f1510f9ac22c3cb
+@message            [ERROR]	2023-12-13T13:00:29.064Z	30ab04f5-998f-4553-9fc4-af0582f3f1de	Erro 502 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <html>
+                    <head><title>502 Bad Gateway</title></head>
+                    <body>
+                    <center><h1>502 Bad Gateway</h1></center>
+                    </body>
+                    </html>
+                    Dormindo 57 segundos antes de tentar novamente.
+@requestId          30ab04f5-998f-4553-9fc4-af0582f3f1de
+@timestamp          1702472429064
+
+---------------------------------------------------------------------------------------------------------
+
+23 - plat-int-girotrade-grupo-de-preco
+
+1                   2023-12-13T09:01:52.784-03:00
+[ERROR] 2023-12-13T12:01:52.784Z ef519199-3a0c-4047-9eae-45774869beb6 Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. {"message": "Endpoint request timed out"} Dormindo 51 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702468921806
+@log                288061038735:/aws/lambda/plat-int-girotrade-grupo-de-preco-prd
+@logStream          2023/12/13/[$LATEST]4ff5b8148f1b4430b744fa39590ebeda
+@message            [ERROR]	2023-12-13T12:01:52.784Z	ef519199-3a0c-4047-9eae-45774869beb6	Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    {"message": "Endpoint request timed out"}
+                    Dormindo 51 segundos antes de tentar novamente.
+@requestId          ef519199-3a0c-4047-9eae-45774869beb6
+@timestamp          1702468912784
+message	
+Endpoint request timed out
+
+---------------------------------------------------------------------------------------------------------
+
+24 - plat-int-girotrade-produtos
+
+1                   2023-12-12T18:23:37.512-03:00
+[ERROR] 2023-12-12T21:23:37.512Z 3b2a0949-c1ad-4d6b-aee1-09d5692b39cb Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;11ddda17&#46;1702416217&#46;30974bbd </BODY></HTML> Dormindo 35 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702416226469
+@log                288061038735:/aws/lambda/plat-int-girotrade-produtos-prd
+@logStream          2023/12/12/[$LATEST]30ca9e6c32c04d4591bb5b1feed6a32d
+@message            [ERROR]	2023-12-12T21:23:37.512Z	3b2a0949-c1ad-4d6b-aee1-09d5692b39cb	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;11ddda17&#46;1702416217&#46;30974bbd
+                    </BODY></HTML>
+                    Dormindo 35 segundos antes de tentar novamente.
+@requestId          3b2a0949-c1ad-4d6b-aee1-09d5692b39cb
+@timestamp          1702416217512
+
+---------------------------------------------------------------------------------------------------------
+
+25 - plat-int-girotrade-entrega
+
+1                   2023-12-13T17:17:22.751-03:00
+[ERROR] AttributeError: 'EntregaService' object has no attribute 'get_free_connection' Traceback (most recent call last):   File "/var/task/girotrade/entrega/run_lambda.py", line 12, in lambda_handler     response = EntregaService(authorization=token).process()   File "/var/task/girotrade/services/entrega_service.py", line 627, in process     self.integrate()   File "/var/task/utils/integrator.py", line 744, in integrate     bd_connection = self.get_free_connection()
+Campo               Valor
+@ingestionTime      1702498650952
+@log                288061038735:/aws/lambda/plat-int-girotrade-entrega-prd
+@logStream          2023/12/13/[$LATEST]dc7f6d1b14d9480b9fa633c9b368b472
+@message            [ERROR] AttributeError: 'EntregaService' object has no attribute 'get_free_connection'
+                    Traceback (most recent call last):
+                      File "/var/task/girotrade/entrega/run_lambda.py", line 12, in lambda_handler
+                        response = EntregaService(authorization=token).process()
+                      File "/var/task/girotrade/services/entrega_service.py", line 627, in process
+                        self.integrate()
+                      File "/var/task/utils/integrator.py", line 744, in integrate
+                        bd_connection = self.get_free_connection()
+@timestamp          1702498642751
+
+---------------------------------------------------------------------------------------------------------
+
+26 - plat-int-caboclo-limite-de-credito
+
+Sem registro de erro
+
+---------------------------------------------------------------------------------------------------------
+
+27 - plat-int-caboclo-limite-de-credito-alpe
+
+1                   2023-12-13T06:50:41.553-03:00
+13/12/2023 09:50:41 - utils.utils - [ERROR]: Erro 502 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+Campo               Valor
+@ingestionTime      1702461050383
+@log                288061038735:/aws/lambda/plat-int-caboclo-limite-de-credito-alpe-prd
+@logStream          2023/12/13/[$LATEST]701b036f2a414092ba61dc1c4726bd7b
+@message            13/12/2023 09:50:41 - utils.utils - [ERROR]: Erro 502 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+@timestamp          1702461041553
+
+---------------------------------------------------------------------------------------------------------
+
+28 - plat-int-caboclo-pedidos
+
+1                   2023-12-14T13:50:59.777-03:00
+[ERROR] 2023-12-14T16:50:59.777Z d66c1904-1055-487a-b552-b671e21a488a Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. {"message": "Endpoint request timed out"} Dormindo 35 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702572668801
+@log                288061038735:/aws/lambda/plat-int-caboclo-pedidos-prd
+@logStream          2023/12/14/[$LATEST]0ef7cfde02084cbf915c97e229bcf8d6
+@message            [ERROR]	2023-12-14T16:50:59.777Z	d66c1904-1055-487a-b552-b671e21a488a	Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    {"message": "Endpoint request timed out"}
+                    Dormindo 35 segundos antes de tentar novamente.
+@requestId          d66c1904-1055-487a-b552-b671e21a488a
+@timestamp          1702572659777
+message	
+Endpoint request timed out
+
+---------------------------------------------------------------------------------------------------------
+
+29 - plat-int-caboclo-defaulters-clients
+
+1                   2023-12-13T07:01:57.827-03:00
+13/12/2023 10:01:57 - utils.utils - [ERROR]: Erro de integração. Erro: Expecting value: line 1 column 1 (char 0)
+Campo               Valor
+@ingestionTime      1702461726850
+@log                288061038735:/aws/lambda/plat-int-caboclo-defaulters-clients-prd
+@logStream          2023/12/13/[$LATEST]caee3fb99fec41bfa31a60c6f5cabb92
+@message            13/12/2023 10:01:57 - utils.utils - [ERROR]: Erro de integração. Erro: Expecting value: line 1 column 1 (char 0)
+@timestamp          1702461717827
+
+---------------------------------------------------------------------------------------------------------
+
+30 - plat-int-caboclo-carteira-cliente-vendedores
+
+Sem registro de erro
+
+---------------------------------------------------------------------------------------------------------
+
+31 - plat-int-caboclo-metodos-de-pagamento
+
+1                   2023-12-14T03:01:55.758-03:00
+14/12/2023 06:01:55 - utils.utils - [ERROR]: Erro de integração. Erro: 8
+Campo               Valor
+@ingestionTime      1702533719247
+@log                288061038735:/aws/lambda/plat-int-caboclo-metodos-de-pagamento-prd
+@logStream          2023/12/14/[$LATEST]c025bb554c6f4b658d1ac3e815b9dc1a
+@message            14/12/2023 06:01:55 - utils.utils - [ERROR]: Erro de integração. Erro: 8
+@timestamp          1702533715758
+
+---------------------------------------------------------------------------------------------------------
+
+32 - plat-int-caboclo-products
+
+1                   2023-12-14T05:24:22.338-03:00
+[ERROR] 2023-12-14T08:24:22.338Z 7926744f-725d-4220-9e8d-54d3daa70fbd Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token. <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY> An error occurred while processing your request.<p> Reference&#32;&#35;102&#46;11ddda17&#46;1702542262&#46;582272f </BODY></HTML> Dormindo 21 segundos antes de tentar novamente.
+Campo               Valor
+@ingestionTime      1702542271159
+@log                288061038735:/aws/lambda/plat-int-caboclo-products-prd
+@logStream          2023/12/14/[$LATEST]26b71fd188d743f59ddd0b25c8ab1670
+@message            [ERROR]	2023-12-14T08:24:22.338Z	7926744f-725d-4220-9e8d-54d3daa70fbd	Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+                    <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>
+                    An error occurred while processing your request.<p>
+                    Reference&#32;&#35;102&#46;11ddda17&#46;1702542262&#46;582272f
+                    </BODY></HTML>
+                    Dormindo 21 segundos antes de tentar novamente.
+@requestId          7926744f-725d-4220-9e8d-54d3daa70fbd
+@timestamp          1702542262338
+
+---------------------------------------------------------------------------------------------------------
+
+33 - plat-int-caboclo-grupo-de-preco
+
+1                   2023-12-14T08:43:21.369-03:00
+14/12/2023 11:43:21 - utils.utils - [ERROR]: Erro de integração. Erro: 'NoneType' object is not iterable
+Campo               Valor
+@ingestionTime      1702554210191
+@log                288061038735:/aws/lambda/plat-int-caboclo-grupo-de-preco-prd
+@logStream          2023/12/14/[$LATEST]06922de96ed849788f0a7c09bb81547a
+@message            14/12/2023 11:43:21 - utils.utils - [ERROR]: Erro de integração. Erro: 'NoneType' object is not iterable
+@timestamp          1702554201369
+
+---------------------------------------------------------------------------------------------------------
+
+34 - plat-int-caboclo-order_status_s3
+
+Sem registro de erro
+
+---------------------------------------------------------------------------------------------------------
+
+35 - plat-int-caboclo-sftp
+
+1                   2023-12-14T14:04:50.320-03:00
+14/12/2023 17:04:50 - utils.utils - [ERROR]: Falha: 'sftp_caboclo_pf' object has no attribute 'get_free_connection'.
+Campo               Valor
+@ingestionTime      1702573494351
+@log                288061038735:/aws/lambda/plat-int-caboclo-sftp-prd
+@logStream          2023/12/14/[$LATEST]a5a595e1033f4d8592108028e01c9035
+@message            14/12/2023 17:04:50 - utils.utils - [ERROR]: Falha: 'sftp_caboclo_pf' object has no attribute 'get_free_connection'.
+@timestamp          1702573490320
+
+---------------------------------------------------------------------------------------------------------
+
+36 - plat-int-caboclo-new-customers-hubspot
+
+1                   2023-12-14T13:01:45.768-03:00
+14/12/2023 16:01:45 - utils.utils - [ERROR]: Não foi possivel cadastrar o cliente cnpj:52958099000132 STATUS_CODE: 422
+Campo               Valor
+@ingestionTime      1702569713864
+@log                288061038735:/aws/lambda/plat-int-caboclo-new-customers-hubspot-prd
+@logStream          2023/12/14/[$LATEST]dd00ec7a6dbc43919d781a2864150195
+@message            14/12/2023 16:01:45 - utils.utils - [ERROR]: Não foi possivel cadastrar o cliente cnpj:52958099000132 STATUS_CODE: 422
+@timestamp          1702569705768
+
+---------------------------------------------------------------------------------------------------------
+
+37 - plat-int-caboclo-campanha-escalonada
+
+1                   2023-12-14T14:09:24.771-03:00
+14/12/2023 17:09:24 - utils.utils - [ERROR]: Erro ao integrar campanha: A metas devem ser progressivas., Campanha: C.ESC BISAO FLOWPACK A PARTIR DE 2CXs SM
+Campo               Valor
+@ingestionTime      1702573773182
+@log                288061038735:/aws/lambda/plat-int-caboclo-campanha-escalonada-prd
+@logStream          2023/12/14/[$LATEST]da00156904824b6f82bc03dc939161d6
+@message            14/12/2023 17:09:24 - utils.utils - [ERROR]: Erro ao integrar campanha: A metas devem ser progressivas., Campanha: C.ESC BISAO FLOWPACK A PARTIR DE 2CXs SM
+@timestamp          1702573764771
+
+---------------------------------------------------------------------------------------------------------
+
+38 - plat-int-caboclo-verbaflex
+
+Sem registro de erro
+
+---------------------------------------------------------------------------------------------------------
+
+39 - plat-int-caboclo-historico-de-titulos
+
+Sem registro de erro
+
+---------------------------------------------------------------------------------------------------------
+
+40 - plat-int-caboclo-orders-status
+
+1                   2023-12-12T20:08:39.400-03:00
+12/12/2023 23:08:39 - utils.utils - [ERROR]: Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+Campo               Valor
+@ingestionTime      1702422528361
+@log                288061038735:/aws/lambda/plat-int-caboclo-orders-status-prd
+@logStream          2023/12/12/[$LATEST]9aa9c745aa3f40ad888dd68a96ffddf9
+@message            12/12/2023 23:08:39 - utils.utils - [ERROR]: Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+@timestamp          1702422519400
+
+---------------------------------------------------------------------------------------------------------
+
+41 - plat-int-caboclo-order-shipping-b2b
+
+Sem registro de erro
+
+---------------------------------------------------------------------------------------------------------
+
+42 - plat-int-caboclo-calendario-de-visitas
+
+Sem registro de erro
+
+---------------------------------------------------------------------------------------------------------
+
+43 - plat-int-caboclo-entrega
+
+1                   2023-12-14T08:01:55.101-03:00
+14/12/2023 11:01:55 - utils.utils - [ERROR]: Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+Campo               Valor
+@ingestionTime      1702551724130
+@log                288061038735:/aws/lambda/plat-int-caboclo-entrega-prd
+@logStream          2023/12/14/[$LATEST]76ef5da0d70b4d40b492c52f23afce77
+@message            14/12/2023 11:01:55 - utils.utils - [ERROR]: Erro 504 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+@timestamp          1702551715101
+
+---------------------------------------------------------------------------------------------------------
+
+44 - plat-int-caboclo-xml
+
+1                   2023-12-13T01:10:14.424-03:00
+13/12/2023 04:10:14 - utils.utils - [ERROR]: Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+Campo               Valor
+@ingestionTime      1702440623304
+@log                288061038735:/aws/lambda/plat-int-caboclo-xml-prd
+@logStream          2023/12/13/[$LATEST]a57c114f3b7841798932ee6d68b065aa
+@message            13/12/2023 04:10:14 - utils.utils - [ERROR]: Erro 503 ao obter token de acesso em https://yandeh-seller-integration.yandeh.com.br/fastapi/v1/token.
+@timestamp          1702440614424
